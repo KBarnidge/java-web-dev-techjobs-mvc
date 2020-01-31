@@ -42,9 +42,6 @@ public class JobData {
     /**
      * Returns the results of searching the Jobs data by field and search term.
      *
-     * For example, searching for employer "Enterprise" will include results
-     * with "Enterprise Holdings, Inc".
-     *
      * @param column Job field that should be searched.
      * @param value Value of the field to search for.
      * @return List of all jobs matching the criteria.
@@ -100,7 +97,6 @@ public class JobData {
      */
     public static ArrayList<Job> findByValue(String value) {
 
-        // load data, if not already loaded
         loadData();
 
         ArrayList<Job> jobs = new ArrayList<>();

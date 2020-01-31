@@ -38,6 +38,26 @@
 
     <!-- TODO #4 - Loop over the search results to display all job fields. -->
 
+    <th:block th:each= "item : ${jobs}">
+        <table class="job-listing">
+            <tr>
+                <td>ID:</td>
+                <td th:text= "${item.id}"></td></tr>
+            <tr>
+                <td>Employer:</td>
+                <td th:text= "${item.employer}"></td></tr>
+            <tr>
+                <td>Location:</td>
+                <td th:text=" ${item.location}"></td></tr>
+            <tr>
+                <td>Position:</td>
+                <td th:text=" ${item.positionType}"></td></tr>
+            <tr>
+                <td>Skill:</td>
+                <td th:text=" ${item.coreCompetency}"></td></tr>
+        </table>
+    </th:block>
+
 </div>
 
 </body>
